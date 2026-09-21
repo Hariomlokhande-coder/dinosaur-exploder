@@ -26,7 +26,9 @@ public class MockGameTimer implements GameTimer {
 
   @Override
   public boolean isElapsed(Duration duration) {
-    return simulatedTime.subtract(capturedAt).subtract(pausedDuration())
+    return simulatedTime
+        .subtract(capturedAt)
+        .subtract(pausedDuration())
         .greaterThanOrEqualTo(duration);
   }
 
